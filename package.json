@@ -1,0 +1,48 @@
+{
+  "name": "netify-benchmarks",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "echo": "bun index.ts",
+    "frameworks": "bun frameworks/index.ts",
+    "micro": "bun micro/index.ts",
+    "cluster": "bun cluster/index.ts",
+    "mmo": "bun mmo/index.ts",
+    "mmo:gateway": "bun mmo/gateway/index.ts",
+    "reliable": "bun reliable/index.ts",
+    "reliable:scale": "bun reliable/scale/index.ts",
+    "websocket": "bun websocket/index.ts",
+    "offload": "bun offload/index.ts",
+    "chaos": "bun chaos/index.ts",
+    "typecheck": "bun --bun tsc --noEmit"
+  },
+  "dependencies": {
+    "@colyseus/core": "0.18",
+    "@colyseus/sdk": "0.18",
+    "@colyseus/ws-transport": "0.18",
+    "@grpc/grpc-js": "^1.14.7",
+    "@nestjs/common": "11",
+    "@nestjs/core": "11",
+    "@nestjs/microservices": "11",
+    "@netifyjs/netify": "link:@netifyjs/netify",
+    "@spilne/perfect-core": "0.6.0",
+    "@spilne/perfect-net": "0.6.0",
+    "colyseus": "^0.18.12",
+    "mitata": "^1.0.34",
+    "moleculer": "^0.15.2",
+    "msgpackr": "^2.1.4",
+    "protobufjs": "^8.8.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "socket.io": "^4.8.4",
+    "socket.io-client": "^4.8.4",
+    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v20.52.0",
+    "ws": "^8.23.0",
+    "zeromq": "6"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.5",
+    "@types/ws": "^8.18.2",
+    "typescript": "^6"
+  }
+}
